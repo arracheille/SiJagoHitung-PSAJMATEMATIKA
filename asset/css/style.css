@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+:root {
+  --red: #ff5833;
+  --yellow: #ffca25;
+  --blue: #4a8acb;
+  --green: #5fab5a;
+  --purple: #5d0045;
+  --white: #fbf6e5;
+  --cream: #f5e9c1;
+}
+* {
+  font-family: "Averia Libre", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+*,
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--white);
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+h1 {
+  font-size: 50px;
+}
+h2 {
+  font-size: 40px;
+}
+h3 {
+  font-size: 30px;
+}
+h4 {
+  font-size: 22px;
+}
+p {
+  font-size: 17px;
+}
+.red {
+  background-color: var(--red);
+}
+.yellow {
+  background-color: var(--yellow);
+}
+.green {
+  background-color: var(--green);
+}
+.blue {
+  background-color: var(--blue);
+}
+.purple {
+  background-color: var(--purple);
+}
+.white {
+  background-color: var(--white);
+}
+.cream {
+  background-color: var(--cream);
+}
+.red,
+.yellow,
+.green,
+.blue,
+.purple {
+  color: var(--white);
+}
+.white,
+.cream {
+  color: var(--purple);
+}
+.right-sharp {
+  border-radius: 2vw 0 2vw 0;
+}
+.left-sharp {
+  border-radius: 0 2vw 0 2vw;
+}
+nav {
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+}
+nav header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  padding-block: 30px;
+}
+.letter-red {
+  color: var(--red);
+}
+.letter-yellow {
+  color: var(--yellow);
+}
+.letter-green {
+  color: var(--green);
+}
+.letter-blue {
+  color: var(--blue);
+}
+.letter-purple {
+  color: var(--purple);
+}
+nav header ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+nav header li {
+  width: 70px;
+  height: 30px;
+  border-radius: 10px;
+}
+section {
+  width: 80%;
+  margin: auto;
+  padding-block: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+section.hero {
+  padding-top: 110px;
+  height: 100vh;
+  box-sizing: border-box;
+  gap: 0;
+}
+.logo-pencil {
+  display: flex;
+  gap: 5px;
+  align-items: end;
+}
+.logo-pencil img {
+  width: 50px;
+}
+.logo-text {
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.hero-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+.grid-1,
+.grid-2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.grid-1 {
+  height: 100%;
+}
+.grid-2 {
+  height: 37vh;
+}
+.grid-1 .item-1,
+.grid-1 .item-2,
+.grid-2 .item-3 {
+  display: flex;
+  min-width: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.grid-2 .item-4 {
+  display: flex;
+  min-width: 0;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+.grid-1 .item-1,
+.grid-1 .item-2 {
+  flex: 1;
+}
+.grid-1 .item-2 {
+  text-align: center;
+}
+.grid-2 .item-3 {
+  flex: 0.5;
+}
+.grid-2 .item-4 .item-img {
+  position: absolute;
+  bottom: -30%;
+  right: 3%;
+  height: 120%;
+}
+.grid-2 .item-4 {
+  flex: 1.5;
+}
+.item-4 .side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  max-width: 70%;
+}
+.heading-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.heading-between p {
+  text-align: end;
+}
+.grid-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+  gap: 50px;
+}
+.game-item {
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+section.games .game-item {
+  height: 35vh;
+}
+section.levels .game-item {
+  aspect-ratio: 1;
+}
+section.games .game-item h4 {
+  max-width: 35%;
+}
+section.games .game-item .item-img {
+  position: absolute;
+  bottom: -30%;
+  right: -20%;
+  height: 120%;
+}
+section.levels .game-item {
+  justify-content: space-between;
+  flex-direction: column;
+}
