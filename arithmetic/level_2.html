@@ -51,15 +51,12 @@
           <select id="questions">
             <option selected>10</option>
             <option>20</option>
-            <option>30</option>
           </select>
           <label for="left_range">Left Range</label>
           <select id="left_range">
-            <option value="5" selected>0 to 5</option>
-            <option value="15">0 to 15</option>
+            <option value="5">0 to 5</option>
+             <option value="15" selected>0 to 15</option>
             <option value="20">0 to 20</option>
-            <option value="50">0 to 50</option>
-            <option value="100">0 to 100</option>
           </select>
           <select id="operator_type_1">
             <option selected>+</option>
@@ -67,8 +64,8 @@
           </select>
           <label for="middle_range">Middle Range</label>
           <select id="middle_range">
-            <option value="5" selected>0 to 5</option>
-            <option value="15">0 to 15</option>
+            <option value="5">0 to 5</option>
+              <option value="15" selected>0 to 15</option>
             <option value="20">0 to 20</option>
             <option value="50">0 to 50</option>
             <option value="100">0 to 100</option>
@@ -79,8 +76,8 @@
           </select>
           <label for="right_range">Right Range</label>
           <select id="right_range">
-            <option value="5" selected>0 to 5</option>
-            <option value="15">0 to 15</option>
+            <option value="5">0 to 5</option>
+             <option value="15" selected>0 to 15</option>
             <option value="20">0 to 20</option>
             <option value="50">0 to 50</option>
             <option value="100">0 to 100</option>
@@ -131,11 +128,11 @@
         </div>
       </div>
       <div class="side-right">
-        <h4 class="letter-purple">Aritmatika Level 1</h4>
+        <h4 class="letter-purple">Aritmatika Level 2</h4>
         <div class="image-bubble">
           <div class="speech-bubble">
             Di level ini anda akan mengerjakan 10 soal dalam 2 menit dengan
-            range angka 0-5 ! Klik start dan selesaikan tiap soal secepatnya
+            range angka 0-15 ! Klik start dan selesaikan tiap soal secepatnya
             sampai waktunya habis ! Klik stop untuk menghentikan permainan.
           </div>
           <span><img src="../asset/img/Elements/1.png" alt="" /></span>
@@ -223,10 +220,8 @@
           document.getElementById("start").disabled = false;
           document.getElementById("stop").disabled = true;
 
-          // Tampilkan SweetAlert2
           Swal.fire({
             title: "Selesai!",
-            text: "Anda telah menyelesaikan semua soal!",
             icon: "success",
             showCancelButton: true,
             confirmButtonText: "Ke Level Selanjutnya",

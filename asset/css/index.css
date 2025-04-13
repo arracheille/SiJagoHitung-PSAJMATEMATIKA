@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+:root {
+  --red: #ff5833;
+  --yellow: #ffca25;
+  --blue: #4a8acb;
+  --green: #5fab5a;
+  --purple: #5d0045;
+  --white: #fbf6e5;
+  --cream: #f5e9c1;
+}
+::-webkit-scrollbar{
+  width: 0;
+}
+* {
+  font-family: "Averia Libre", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+*,
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--white);
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+button{
+    border: none;
+}
+h1 {
+  font-size: 50px;
+}
+h2 {
+  font-size: 40px;
+}
+h3 {
+  font-size: 30px;
+}
+h4 {
+  font-size: 22px;
+}
+p {
+  font-size: 17px;
+}
+a {
+  text-decoration: none;
+  font-size: 17px;
+  color: var(--purple);
+}
+.red {
+  background-color: var(--red);
+}
+.yellow {
+  background-color: var(--yellow);
+}
+.green {
+  background-color: var(--green);
+}
+.blue {
+  background-color: var(--blue);
+}
+.purple {
+  background-color: var(--purple);
+}
+.white {
+  background-color: var(--white);
+}
+.cream {
+  background-color: var(--cream);
+}
+.red,
+.yellow,
+.green,
+.blue,
+.purple {
+  color: var(--white);
+}
+.white,
+.cream {
+  color: var(--purple);
+}
+.letter-red {
+  color: var(--red);
+}
+.letter-yellow {
+  color: var(--yellow);
+}
+.letter-green {
+  color: var(--green);
+}
+.letter-blue {
+  color: var(--blue);
+}
+.letter-purple {
+  color: var(--purple);
+}
+.letter-white {
+  color: var(--white);
+}
+.right-sharp {
+  border-radius: 2vw 0 2vw 0;
+}
+.left-sharp {
+  border-radius: 0 2vw 0 2vw;
+}
+.btn,
+.logo-text {
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.btn-icon {
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 0 10px 0 10px;
+}
+.btn-icon i {
+  font-size: 20px;
+}
+.text-small {
+  font-size: 13px;
+}
+nav {
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+}
+nav header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  padding-block: 30px;
+}
+nav header ul,
+footer .contact,
+footer .page-links {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+nav header li {
+  width: 70px;
+  height: 30px;
+  border-radius: 10px;
+}
+section {
+  width: 80%;
+  margin: auto;
+  padding-block: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+footer {
+  padding-block: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+footer .page-links a {
+  color: var(--white);
+}
+footer p {
+  font-size: 10px;
+  color: #fbf6e583;
+}
+section.first-section {
+  padding-top: 110px;
+  height: 100vh;
+  box-sizing: border-box;
+  gap: 0;
+}

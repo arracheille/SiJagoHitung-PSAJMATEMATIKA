@@ -4,12 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Si Jago Hitung</title>
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script
       src="https://kit.fontawesome.com/1a293db120.js"
       crossorigin="anonymous"
@@ -50,13 +44,24 @@
           <label for="questions">Questions</label>
           <select id="questions">
             <option selected>10</option>
-            <option>20</option>
-            <option>30</option>
+            <option>50</option>
+            <option>100</option>
+            <option>200</option>
           </select>
           <label for="left_range">Left Range</label>
           <select id="left_range">
+            <option value="1">0 to 1</option>
+            <option value="2">0 to 2</option>
+            <option value="3">0 to 3</option>
+            <option value="4">0 to 4</option>
             <option value="5" selected>0 to 5</option>
-            <option value="15">0 to 15</option>
+            <option value="6">0 to 6</option>
+            <option value="7">0 to 7</option>
+            <option value="8">0 to 8</option>
+            <option value="9">0 to 9</option>
+            <option value="10">0 to 10</option>
+            <option value="11">0 to 11</option>
+            <option value="12">0 to 12</option>
             <option value="20">0 to 20</option>
             <option value="50">0 to 50</option>
             <option value="100">0 to 100</option>
@@ -67,8 +72,18 @@
           </select>
           <label for="middle_range">Middle Range</label>
           <select id="middle_range">
+            <option value="1">0 to 1</option>
+            <option value="2">0 to 2</option>
+            <option value="3">0 to 3</option>
+            <option value="4">0 to 4</option>
             <option value="5" selected>0 to 5</option>
-            <option value="15">0 to 15</option>
+            <option value="6">0 to 6</option>
+            <option value="7">0 to 7</option>
+            <option value="8">0 to 8</option>
+            <option value="9">0 to 9</option>
+            <option value="10">0 to 10</option>
+            <option value="11">0 to 11</option>
+            <option value="12">0 to 12</option>
             <option value="20">0 to 20</option>
             <option value="50">0 to 50</option>
             <option value="100">0 to 100</option>
@@ -79,8 +94,18 @@
           </select>
           <label for="right_range">Right Range</label>
           <select id="right_range">
+            <option value="1">0 to 1</option>
+            <option value="2">0 to 2</option>
+            <option value="3">0 to 3</option>
+            <option value="4">0 to 4</option>
             <option value="5" selected>0 to 5</option>
-            <option value="15">0 to 15</option>
+            <option value="6">0 to 6</option>
+            <option value="7">0 to 7</option>
+            <option value="8">0 to 8</option>
+            <option value="9">0 to 9</option>
+            <option value="10">0 to 10</option>
+            <option value="11">0 to 11</option>
+            <option value="12">0 to 12</option>
             <option value="20">0 to 20</option>
             <option value="50">0 to 50</option>
             <option value="100">0 to 100</option>
@@ -96,21 +121,17 @@
               <span id="operator_value_2">+</span>
               <span id="right">99</span> =
             </label>
-            <input
-              type="text"
-              id="answer"
-              size="5"
-              autocomplete="off"
-              autofocus
-            />
+            <input type="text" id="answer" size="5" autofocus />
           </div>
           <div class="form-buttons">
             <button type="button" id="start" class="btn green">Start</button>
-            <button type="button" id="stop" class="btn" disabled>Stop</button>
+            <button type="button" id="stop" class="btn yellow" disabled>
+              Stop
+            </button>
           </div>
         </div>
 
-        <div class="letter-purple">
+        <div>
           Time <span id="seconds_remaining_text"></span>
           <div class="progress">
             <div class="progress-bar" id="seconds_remaining_bar"></div>
@@ -126,20 +147,16 @@
         </div>
 
         <div class="answers-box">
-          <p class="letter-purple">Your answers</p>
+          <p>Your answers</p>
           <div id="answers"></div>
         </div>
       </div>
       <div class="side-right">
-        <h4 class="letter-purple">Aritmatika Level 1</h4>
-        <div class="image-bubble">
-          <div class="speech-bubble">
-            Di level ini anda akan mengerjakan 10 soal dalam 2 menit dengan
-            range angka 0-5 ! Klik start dan selesaikan tiap soal secepatnya
-            sampai waktunya habis ! Klik stop untuk menghentikan permainan.
-          </div>
-          <span><img src="../asset/img/Elements/1.png" alt="" /></span>
+        <div class="speech-bubble">
+          Klik start dan selesaikan tiap soal secepatnya sampai waktunya habis !
+          Klik stop untuk menghentikan permainan.
         </div>
+        <span><img src="../asset/img/Elements/1.png" alt="" /></span>
       </div>
     </section>
     <script>
@@ -222,21 +239,6 @@
           document.getElementById("left").textContent = "_";
           document.getElementById("start").disabled = false;
           document.getElementById("stop").disabled = true;
-
-          // Tampilkan SweetAlert2
-          Swal.fire({
-            title: "Selesai!",
-            text: "Anda telah menyelesaikan semua soal!",
-            icon: "success",
-            showCancelButton: true,
-            confirmButtonText: "Ke Level Selanjutnya",
-            cancelButtonText: "Tutup",
-          }).then((result) => {
-            if (result.isConfirmed) {
-              window.location.href = "level_2.html";
-            } else if (result.isDismissed) {
-            }
-          });
         },
 
         displaySecondsRemaining: function (seconds) {
@@ -284,7 +286,7 @@
         },
 
         getRandomOperator: function () {
-          var operators = ["+", "-"];
+          var operators = ["+", "-", "*", "/"];
           return operators[Math.floor(Math.random() * operators.length)];
         },
 

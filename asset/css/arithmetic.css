@@ -1,44 +1,40 @@
-body {
-  padding: 0;
+section {
+  flex-direction: row;
+  overflow: hidden;
 }
-.arithmetic-divider {
-  display: flex;
-  gap: 1rem;
-  height: 100vh;
-  padding: 2rem;
+section.first-section {
+  gap: 50px;
 }
-.container {
-  background: var(--midblue);
-  padding: 2rem;
-  border-radius: 5px;
-  margin: 0;
+.side-left,
+.side-right {
+  width: 100%;
 }
-.bordered {
-  background-color: var(--lightblue);
-  padding: 5rem;
-  border-radius: 5px;
-}
-.form-inline .game-settings {
-  /* display: none; */
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-}
-.form-inline select {
-  font-size: 1.5rem;
-}
-label.label-q {
-  color: var(--white);
-  font-family: var(--paytone);
-  font-size: 3rem;
-}
-.form-q {
+.side-left,
+.side-right,
+.side-right .image-bubble {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
 }
-.form-q input[type="text"] {
+.side-left {
   width: 100%;
+  height: 100%;
+  justify-content: center;
+  gap: 20px;
+}
+.side-right {
+  width: 20vw;
+  justify-content: center;
+  align-items: end;
+  gap: 30px;
+}
+.side-right .image-bubble {
+  gap: 30px;
+}
+.answers-box {
+  padding: 20px;
+  border-radius: 5px;
+  min-height: 20vh;
+  background-color: var(--cream);
 }
 .answer {
   float: left;
@@ -49,12 +45,82 @@ label.label-q {
   border-radius: 5px;
 }
 .right {
-  border-color: #5cb85c;
-  color: #5cb85c;
-  background-color: #dbffdb;
+  border-color: var(--green);
+  color: var(--green);
+  background-color: var(--white);
 }
 .wrong {
-  border-color: #d9534f;
-  color: #d9534f;
-  background-color: #ffd2ce;
+  border-color: var(--red);
+  color: var(--red);
+  background-color: var(--white);
+}
+.progress {
+  width: 100%;
+  background-color: var(--cream);
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+.progress-bar {
+  height: 20px;
+  background-color: var(--green);
+  width: 0;
+  transition: width 0.5s ease;
+}
+.top-operator {
+  display: none;
+}
+.form-questions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.form-label,
+.form-label label {
+  color: var(--purple);
+}
+.form-label,
+.form-label label,
+.form-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.form-questions label span {
+  font-size: 25px;
+}
+.form-label input {
+  padding: 5px;
+  width: 100px;
+  background-color: var(--cream);
+  color: var(--purple);
+  border: none;
+  border-radius: 5px;
+}
+.form-buttons button:last-child {
+  background-color: rgba(255, 88, 51, 0.4);
+}
+.form-buttons button:last-child:enabled {
+  background-color: var(--red);
+  color: var(--white);
+}
+.speech-bubble {
+  position: relative;
+  background: var(--cream);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: var(--purple);
+}
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 10%;
+  margin-left: -10px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: var(--cream);
 }

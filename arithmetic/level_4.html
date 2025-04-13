@@ -44,21 +44,21 @@
           <label for="minutes">Minutes</label>
           <select id="minutes">
             <option value="0.5">30 seconds</option>
-            <option value="1">1 minute</option>
-            <option value="2" selected>2 minutes</option>
+            <option value="1" selected>1 minute</option>
+            <option value="2">2 minutes</option>
           </select>
           <label for="questions">Questions</label>
           <select id="questions">
-            <option selected>10</option>
+            <option>10</option>
             <option>20</option>
-            <option>30</option>
+            <option selected>30</option>
           </select>
           <label for="left_range">Left Range</label>
           <select id="left_range">
-            <option value="5" selected>0 to 5</option>
+            <option value="5">0 to 5</option>
             <option value="15">0 to 15</option>
             <option value="20">0 to 20</option>
-            <option value="50">0 to 50</option>
+            <option value="50" selected>0 to 50</option>
             <option value="100">0 to 100</option>
           </select>
           <select id="operator_type_1">
@@ -67,10 +67,10 @@
           </select>
           <label for="middle_range">Middle Range</label>
           <select id="middle_range">
-            <option value="5" selected>0 to 5</option>
+            <option value="5">0 to 5</option>
             <option value="15">0 to 15</option>
             <option value="20">0 to 20</option>
-            <option value="50">0 to 50</option>
+            <option value="50" selected>0 to 50</option>
             <option value="100">0 to 100</option>
           </select>
           <select id="operator_type_2">
@@ -79,10 +79,10 @@
           </select>
           <label for="right_range">Right Range</label>
           <select id="right_range">
-            <option value="5" selected>0 to 5</option>
+            <option value="5">0 to 5</option>
             <option value="15">0 to 15</option>
             <option value="20">0 to 20</option>
-            <option value="50">0 to 50</option>
+            <option value="50" selected>0 to 50</option>
             <option value="100">0 to 100</option>
           </select>
         </div>
@@ -131,11 +131,11 @@
         </div>
       </div>
       <div class="side-right">
-        <h4 class="letter-purple">Aritmatika Level 1</h4>
+        <h4 class="letter-purple">Aritmatika Level 4</h4>
         <div class="image-bubble">
           <div class="speech-bubble">
-            Di level ini anda akan mengerjakan 10 soal dalam 2 menit dengan
-            range angka 0-5 ! Klik start dan selesaikan tiap soal secepatnya
+            Di level ini anda bisa mengerjakan 30 soal dalam 1 menit dengan
+            range angka 0-50 ! Klik start dan selesaikan tiap soal secepatnya
             sampai waktunya habis ! Klik stop untuk menghentikan permainan.
           </div>
           <span><img src="../asset/img/Elements/1.png" alt="" /></span>
@@ -223,10 +223,8 @@
           document.getElementById("start").disabled = false;
           document.getElementById("stop").disabled = true;
 
-          // Tampilkan SweetAlert2
           Swal.fire({
             title: "Selesai!",
-            text: "Anda telah menyelesaikan semua soal!",
             icon: "success",
             showCancelButton: true,
             confirmButtonText: "Ke Level Selanjutnya",
@@ -284,12 +282,17 @@
         },
 
         getRandomOperator: function () {
-          var operators = ["+", "-"];
+          var operators = ["+", "-", "*", "/"];
           return operators[Math.floor(Math.random() * operators.length)];
         },
 
-        canDivide: function (numerator, denominator) {
-          return denominator !== 0 && numerator % denominator === 0;
+        getEvenNumber: function (max) {
+          // Menghasilkan angka genap acak dari 0 hingga max
+          let number;
+          do {
+            number = Math.floor(Math.random() * (max + 1));
+          } while (number % 2 !== 0); // Pastikan angka genap
+          return number;
         },
 
         askQuestion: function () {
@@ -306,17 +309,17 @@
           // Mengacak soal hingga tidak ada pembagian dengan nol
           do {
             left = Math.floor(Math.random() * (quiz.leftRange + 1));
-            middle = Math.floor(Math.random() * (quiz.middleRange + 1));
-            right = Math.floor(Math.random() * (quiz.rightRange + 1));
+            middle = quiz.getEvenNumber(quiz.middleRange); // Hanya angka genap
+            right = quiz.getEvenNumber(quiz.rightRange); // Hanya angka genap
 
             // Jika operator1 adalah pembagian, pastikan middle tidak nol
             if (operator1 === "/") {
-              middle = middle === 0 ? 1 : middle; // Ganti dengan 1 jika nol
+              middle = middle === 0 ? 2 : middle; // Ganti dengan 2 jika nol
             }
 
             // Jika operator2 adalah pembagian, pastikan right tidak nol
             if (operator2 === "/") {
-              right = right === 0 ? 1 : right; // Ganti dengan 1 jika nol
+              right = right === 0 ? 2 : right; // Ganti dengan 2 jika nol
             }
           } while (
             (operator1 === "/" && middle === 0) ||
