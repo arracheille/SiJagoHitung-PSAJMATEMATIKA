@@ -26,11 +26,6 @@ body {
 body {
   background-color: var(--white);
 }
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
 button{
     border: none;
 }
@@ -86,22 +81,22 @@ a {
 .cream {
   color: var(--purple);
 }
-.letter-red {
+.text-red {
   color: var(--red);
 }
-.letter-yellow {
+.text-yellow {
   color: var(--yellow);
 }
-.letter-green {
+.text-green {
   color: var(--green);
 }
-.letter-blue {
+.text-blue {
   color: var(--blue);
 }
-.letter-purple {
+.text-purple {
   color: var(--purple);
 }
-.letter-white {
+.text-white {
   color: var(--white);
 }
 .right-sharp {

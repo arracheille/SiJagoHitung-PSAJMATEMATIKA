@@ -1,0 +1,63 @@
+:root {
+  --tile-2-bg: #fff9c4; /* Kuning muda untuk 2 */
+  --tile-4-bg: #fff59d; /* Kuning untuk 4 */
+  --tile-8-bg: #fff176; /* Kuning untuk 8 */
+  --tile-16-bg: #ffee58; /* Kuning untuk 16 */
+  --tile-32-bg: #ffeb3b; /* Kuning untuk 32 */
+  --tile-64-bg: #fdd835; /* Kuning untuk 64 */
+  --tile-128-bg: #fbc02d; /* Kuning untuk 128 */
+  --tile-256-bg: #f9a825; /* Kuning untuk 256 */
+  --tile-512-bg: #f57f17; /* Kuning gelap untuk 512 */
+  --tile-1024-bg: #f57f17; /* Kuning gelap untuk 1024 */
+  --tile-2048-bg: #f57f17; /* Kuning gelap untuk 2048 */
+  --tile-4096-bg: #f57f17; /* Kuning gelap untuk 4096 */
+  --tile-8192-bg: #f57f17; /* Kuning gelap untuk 8192 */
+  --tile-text-dark: #5d0045; /* Warna teks hitam untuk kontras */
+  --tile-text-light: #5d0045; /* Warna teks hitam untuk kontras */
+}
+.board-container {
+  background-color: var(--cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-size: 7.5vmin;
+}
+.board-game {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-size), var(--cell-size));
+  grid-template-rows: repeat(var(--grid-size), var(--cell-size));
+  background-color: var(--white);
+  gap: var(--cell-gap);
+  border-radius: 1vmin;
+  padding: var(--cell-gap);
+  position: relative;
+}
+.cell {
+  background-color: var(--cream);
+  border-radius: 1vmin;
+}
+.tile {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--cell-size);
+  height: var(--cell-size);
+  background-color: red;
+  border-radius: 1vmin;
+  top: calc(var(--y) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
+  left: calc(var(--x) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
+  font-weight: bold;
+  background-color: hsl(200, 50%, var(--background-lightness));
+  color: hsl(200, 25%, var(--text-lightness));
+  animation: show 200ms ease-in-out;
+  transition: 100ms ease-in-out;
+}
+@keyframes show {
+  0% {
+    opacity: 0.5;
+    transform: scale(0);
+  }
+}
