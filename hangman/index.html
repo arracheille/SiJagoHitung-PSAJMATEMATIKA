@@ -11,53 +11,41 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <nav class="white">
-      <header>
-        <h3>
-          Si <span class="text text-red">J</span
-          ><span class="text text-yellow">a</span
-          ><span class="text text-green">g</span
-          ><span class="text text-blue">o</span> Hitung
-        </h3>
-        <ul class="colors-container">
-          <li class="colors-content purple"></li>
-          <li class="colors-content red"></li>
-          <li class="colors-content yellow"></li>
-          <li class="colors-content blue"></li>
-          <li class="colors-content green"></li>
-        </ul>
-      </header>
-    </nav>
+    <section class="first-section">
+      <div class="main">
+        <div class="game">
+          <div class="left">
+            <img class="img" src="images/hangman-0.svg" />
+            <h1 class="text-purple">Hangman</h1>
+          </div>
+          <div class="right">
+            <ul class="word-display"></ul>
+            <h4 class="text-purple">
+              Hint:Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Laborum, ipsum!
+            </h4>
+            <p class="text-purple">
+              Incorrect guessess:
+              <span class="chance">0/6</span>
+            </p>
+            <div class="keyboard"></div>
+          </div>
+        </div>
+        <div class="GameOver">
+          <img class="gameoverImg" src="images/lost.gif" />
+          <h3>Game Over!</h3>
+          <h6>
+            The Correct Word Was:<span class="answer" style="color: red"
+              >Jazz</span
+            >
+          </h6>
+          <button onclick="location.reload()">PLAY AGAIN</button>
+        </div>
+      </div>
 
-    <section class="main first-section">
-      <div class="game">
-        <div class="left">
-          <img class="img" src="images/hangman-0.svg" />
-          <h1>HANGMAN GAME</h1>
-        </div>
-        <div class="right">
-          <ul class="word-display"></ul>
-          <h4>
-            Hint:Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Laborum, ipsum!
-          </h4>
-          <p>
-            Incorrect guessess:
-            <span class="chance" style="color: red">0/6</span>
-          </p>
-          <div class="keyboard"></div>
-        </div>
-      </div>
-      <div class="GameOver">
-        <img class="gameoverImg" src="images/lost.gif" />
-        <h3>Game Over!</h3>
-        <h6>
-          The Correct Word Was:<span class="answer" style="color: red"
-            >Jazz</span
-          >
-        </h6>
-        <button onclick="location.reload()">PLAY AGAIN</button>
-      </div>
+      <footer class="footer-sm purple text-white">
+        <p>SiJagoHitung © 2025</p>
+      </footer>
     </section>
   </body>
 </html>

@@ -1,13 +1,23 @@
-.main {
-  background-color: crimson;
-  width: 100vw;
+section {
+  width: 100%;
+  padding-block: 0;
+}
+section.first-section {
+  padding-block: 0;
   height: 100vh;
+  box-sizing: border-box;
+  gap: 0;
+}
+.main {
+  background-color: var(--cream);
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .game {
-  background-color: #fff;
+  background-color: var(--white);
   width: 900px;
   height: 470px;
   border-radius: 10px;
@@ -52,13 +62,12 @@
   font-size: 2rem;
   width: 30px;
   margin-bottom: 3px;
-  border-bottom: 3px solid #000;
+  border-bottom: 3px solid var(--purple);
 }
 .letter.guess {
   border: transparent;
   margin-top: -30px;
 }
-
 .keyboard {
   display: flex;
   align-items: center;
@@ -71,15 +80,17 @@
   height: 40px;
   border-radius: 5px;
   border: none;
-  background-color: crimson;
-  color: #fff;
+  background-color: var(--red);
+  color: var(--white);
   font-size: 1rem;
   text-align: center;
   text-transform: uppercase;
   font-weight: bolder;
   cursor: pointer;
 }
-
+.chance {
+  color: var(--red);
+}
 .GameOver {
   position: absolute;
   top: 50%;
@@ -207,7 +218,6 @@
     cursor: pointer;
   }
 }
-
 @media (max-width: 346px) {
   .game {
     flex-direction: column;
@@ -219,7 +229,6 @@
     width: 230px;
     margin-bottom: 50px;
   }
-
   html {
     font-size: 95%;
   }
@@ -236,16 +245,13 @@
     font-weight: bolder;
     cursor: pointer;
   }
-
   .left {
     width: 100%;
     height: 40%;
   }
-
   .left h1 {
     display: none;
   }
-
   .right {
     width: 90%;
     height: 40%;

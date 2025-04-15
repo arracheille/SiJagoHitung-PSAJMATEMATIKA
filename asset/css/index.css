@@ -5,10 +5,10 @@
   --blue: #4a8acb;
   --green: #5fab5a;
   --purple: #5d0045;
-  --white: #fbf6e5;
-  --cream: #f5e9c1;
+  --white: #fffbed;
+  --cream: #f9ecc4;
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 0;
 }
 * {
@@ -26,8 +26,8 @@ body {
 body {
   background-color: var(--white);
 }
-button{
-    border: none;
+button {
+  border: none;
 }
 h1 {
   font-size: 50px;
@@ -180,4 +180,7 @@ section.first-section {
   height: 100vh;
   box-sizing: border-box;
   gap: 0;
+}
+footer.footer-sm {
+  padding-block: 10px;
 }
