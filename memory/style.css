@@ -1,30 +1,27 @@
 html {
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    325deg,
-    #03001e 0%,
-    #7303c0 30%,
-    #ec38bc 70%,
-    #fdeff9 100%
-  );
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--green);
   overflow: hidden;
 }
 .game {
   position: absolute;
-  top: 50%;
-  left: 70%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .controls {
   display: flex;
+  align-items: start;
   gap: 20px;
   margin-bottom: 20px;
 }
 button {
-  background: #282a3a;
-  color: #fff;
+  background: var(--purple);
+  color: var(--white);
   border-radius: 5px;
   padding: 10px 20px;
   border: 0;
@@ -34,10 +31,12 @@ button {
   font-weight: bold;
 }
 .disabled {
-  color: #757575;
+  color: rgba(255, 251, 237, 0.5);
+  background: #460035;
+  cursor: not-allowed;
 }
 .stats {
-  color: #fff;
+  color: var(--white);
   font-size: 14pt;
   font-weight: bold;
 }
@@ -48,13 +47,7 @@ button {
 .win {
   border-radius: 5px;
   box-shadow: 0 25px 50px rgb(33 33 33 / 25%);
-  background: linear-gradient(
-    135deg,
-    #03001e 0%,
-    #7303c0 0%,
-    #ec38bc 50%,
-    #fdeff9 100%
-  );
+  background: var(--cream);
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   backface-visibility: hidden;
 }
@@ -75,6 +68,7 @@ button {
   width: 100px;
   height: 100px;
   cursor: pointer;
+  color: var(--green);
 }
 .card-front,
 .card-back {
@@ -82,7 +76,7 @@ button {
   border-radius: 5px;
   width: 100%;
   height: 100%;
-  background: #282a3a;
+  background: var(--purple);
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   backface-visibility: hidden;
 }
@@ -92,7 +86,7 @@ button {
   user-select: none;
   text-align: center;
   line-height: 100px;
-  background: #fdf8e6;
+  background: var(--white);
 }
 .card.flipped .card-front {
   transform: rotateY(180deg) rotateZ(50deg);
@@ -107,7 +101,7 @@ button {
   width: 100%;
   height: 100%;
   text-align: center;
-  background: #fdf8e6;
+  background: var(--white);
   transform: rotateY(180deg) rotateZ(50deg);
 }
 .win-text {
@@ -116,9 +110,8 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 21pt;
-  color: #282a3a;
+  color: var(--purple);
 }
 .highlight {
-  color: #7303c0;
+  color: var(--green);
 }
-    

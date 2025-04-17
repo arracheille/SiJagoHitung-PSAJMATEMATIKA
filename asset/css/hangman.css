@@ -9,24 +9,24 @@ section.first-section {
   gap: 0;
 }
 .main {
-  background-color: var(--cream);
+  background-color: var(--red);
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 .game {
   background-color: var(--white);
-  width: 900px;
-  height: 470px;
+  width: 60vw;
+  height: 60vh;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 1;
+  padding: 20px;
+  margin-left: 7vw;
 }
-
 .left {
   width: 40%;
   height: 100%;
@@ -96,7 +96,7 @@ section.first-section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #fff;
+  background: var(--white);
   width: 350px;
   height: 350px;
   display: none;
@@ -122,15 +122,17 @@ section.first-section {
   height: 40px;
   border-radius: 8px;
   border: none;
-  background-color: crimson;
-  color: #fff;
+  background-color: var(--red);
+  color: var(--white);
   font-size: 1.1rem;
   text-align: center;
   margin-top: 5px;
   font-weight: bolder;
   cursor: pointer;
 }
-
+.image-bubble{
+  margin-right: 7vw;
+}
 @media (max-width: 700px) {
   .game {
     flex-direction: column;
@@ -151,8 +153,8 @@ section.first-section {
     height: 30px;
     border-radius: 5px;
     border: none;
-    background-color: crimson;
-    color: #fff;
+    background-color: var(--red);
+    color: var(--white);
     font-size: 1rem;
     text-align: center;
     text-transform: uppercase;
@@ -187,8 +189,8 @@ section.first-section {
     height: 34px;
     border-radius: 5px;
     border: none;
-    background-color: crimson;
-    color: #fff;
+    background-color: var(--red);
+    color: var(--white);
     font-size: 1rem;
     text-align: center;
     text-transform: uppercase;
@@ -209,8 +211,8 @@ section.first-section {
     height: 25px;
     border-radius: 5px;
     border: none;
-    background-color: crimson;
-    color: #fff;
+    background-color: var(--red);
+    color: var(--white);
     font-size: 1rem;
     text-align: center;
     text-transform: uppercase;
@@ -237,8 +239,8 @@ section.first-section {
     height: 30px;
     border-radius: 5px;
     border: none;
-    background-color: crimson;
-    color: #fff;
+    background-color: var(--red);
+    color: var(--white);
     font-size: 1rem;
     text-align: center;
     text-transform: uppercase;

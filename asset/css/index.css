@@ -184,3 +184,41 @@ section.first-section {
 footer.footer-sm {
   padding-block: 10px;
 }
+.character-right {
+  position: absolute;
+  right: 0;
+  height: 100%;
+}
+.character-right .image-bubble {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: end;
+  justify-content: center;
+  margin-right: 20px;
+}
+.character-right .speech-bubble {
+  position: relative;
+  background: var(--white );
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: var(--purple);
+  max-width: 20vw;
+}
+.character-right .speech-bubble::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 10%;
+  margin-left: -10px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: var(--white);
+}
+.character-right .image-bubble span img {
+  max-width: 20vw;
+}

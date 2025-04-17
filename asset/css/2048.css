@@ -16,7 +16,7 @@
   --tile-text-light: #5d0045; /* Warna teks hitam untuk kontras */
 }
 .board-container {
-  background-color: var(--cream);
+  background-color: var(--yellow);
   display: flex;
   justify-content: center;
   align-items: center;

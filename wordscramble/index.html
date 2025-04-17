@@ -2,9 +2,17 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>Word Scramble Game | CodingNepal</title>
+    <title>Word Scramble</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../asset/css/index.css" />
     <link rel="stylesheet" href="style.css" />
-    <meta name="viewpxxxx   ort" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script src="js/words.js" defer></script>
     <script src="js/script.js" defer></script>
   </head>
@@ -19,11 +27,25 @@
             Time Left: <span><b>30</b>s</span>
           </p>
         </div>
-        <input type="text" spellcheck="false" placeholder="Enter a valid word" />
+        <input
+          type="text"
+          spellcheck="false"
+          placeholder="Enter a valid word"
+        />
         <div class="buttons">
           <button class="refresh-word">Refresh Word</button>
           <button class="check-word">Check Word</button>
         </div>
+      </div>
+    </div>
+    <div class="character-right">
+      <div class="image-bubble">
+        <div class="speech-bubble">
+          Word Scramble adalah game dimana kamu bisa menebak kata dari beberapa
+          huruf yang acak! isi input untuk memasukkan kata, klik Check Word
+          untuk mengecek kata dan Refresh Word untuk mengganti kata.
+        </div>
+        <span><img src="../asset/img/Elements/8.png" alt="" /></span>
       </div>
     </div>
   </body>

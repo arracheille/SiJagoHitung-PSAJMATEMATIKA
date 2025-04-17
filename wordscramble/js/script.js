@@ -33,9 +33,34 @@ const initGame = () => {
 initGame();
 const checkWord = () => {
   let userWord = inputField.value.toLowerCase();
-  if (!userWord) return alert("Please enter the word to check!");
-  if (userWord !== correctWord) return alert(`Oops! ${userWord} is not a correct word`);
-  alert(`Congrats! ${correctWord.toUpperCase()} is the correct word`);
+
+  if (!userWord) {
+    Swal.fire({
+      text: "Tolong inputkan kata untuk mengecek!",
+      icon: "warning",
+      showConfirmButton: false,
+      timer: 2000,
+    });
+    return;
+  }
+
+  if (userWord !== correctWord) {
+    Swal.fire({
+      text: `Oops! ${userWord} bukan kata yang benar`,
+      icon: "error",
+      showConfirmButton: false,
+      timer: 2000,
+    });
+    return;
+  }
+
+  Swal.fire({
+    text: `Selamat! ${correctWord.toUpperCase()} adalah kata yang benar`,
+    icon: "success",
+    showConfirmButton: false,
+    timer: 2000,
+  });
+
   initGame();
 };
 refreshBtn.addEventListener("click", initGame);
